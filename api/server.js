@@ -34,11 +34,11 @@ server.use(helmet());
 server.use(express.json());
 server.use(cors());
 
-server.use("/api/", usersRouter);
+server.use("/api/users", usersRouter);
 server.use("/api/", authRouter);
 
 server.get("/", (req, res) => {
-  res.json({ messafe: "Welcome to Tara's Unit 4 - Sprint 3 - Module Project 1" });
+  res.json({ message: "Welcome to Tara's Unit 4 - Sprint 3 - Module Project 1" });
 });
 
 module.exports = server;
